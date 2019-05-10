@@ -1,8 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const LogoContainer = styled.div`
+ text-align:center;
+ height:80%;
+`;
 
 function Logo(){
 return(
-    <div className="logo">Logo Placeholder</div>
+    <LogoContainer>Logo Placeholder</LogoContainer>
 );
 }
 

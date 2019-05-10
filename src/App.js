@@ -3,16 +3,19 @@ import './App.css';
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 import Footer from './components/Footer/Footer';
+import styled from 'styled-components';
 
-
+const FrontPage = styled.div`
+  height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <FrontPage>
       <Header/>
       <Content/>
       <Footer/>
-    </div>
+    </FrontPage>
   );
 }
 

@@ -1,8 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const ContentContainer = styled.div`
+  height: 50%;
+  background: aliceblue;
+`;
 
 function Content() {
     return (
-    <div className="content">content</div>
+    <ContentContainer>
+      <p>Content</p>
+    </ContentContainer>
     );
 }
 
