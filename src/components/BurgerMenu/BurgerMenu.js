@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BurgerMenuButton = styled.button`
-    height: 30px;
-    width: 60px;
-    background-color: orange;
+const BurgerMenuButton = styled.p`
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+`;
+
+const BurgerLine = styled.span`
+    color:white;
 `;
 
 function BurgerMenu() {
     return (
-        <BurgerMenuButton>Menu</BurgerMenuButton>
+        <BurgerMenuButton>M</BurgerMenuButton>
+        <BurgerLine>asd</BurgerLine>
     );
 }
 

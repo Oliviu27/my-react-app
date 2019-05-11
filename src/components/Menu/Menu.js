@@ -5,18 +5,29 @@ const MenuList = styled.ul`
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    width: 80%;
+    width: 60%;
     height:20%;
+`;
+
+const MenuLink = styled.li`
+    font-weight: 100;
+    color: #ffffffb5;
+
+    :hover {
+        color:white;
+        border-bottom: 0.5px solid #ffffffb3;
+        transition: .3s;
+      }
 `;
 
 
 class Menu extends React.Component {
     render() {
-        const menuElements = ['PRODUCT','ABOUT','PORTFOLIO','TEAM','CONTACT'];
+        const menuElements = ['Discover','Suggestions','Points','Connected','Updates'];
         return (
             <MenuList> 
                 {menuElements.map(text => (
-                        <li>{text}</li>
+                        <MenuLink>{text}</MenuLink>
                     )
                 )}
             </MenuList>

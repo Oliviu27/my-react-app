@@ -12,8 +12,8 @@ const NavigationContainer = styled.div`
 function Navigation() {
     return (
         <NavigationContainer>
-            <Menu />
             <BurgerMenu />
+            <Menu />
         </NavigationContainer>
         );
     }
