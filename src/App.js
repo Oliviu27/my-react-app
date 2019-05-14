@@ -6,7 +6,9 @@ import Footer from './components/Footer/Footer';
 import styled from 'styled-components';
 
 const FrontPage = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
 `;
 
 function App() {

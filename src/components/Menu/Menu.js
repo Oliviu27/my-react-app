@@ -12,27 +12,25 @@ const MenuList = styled.ul`
 const MenuLink = styled.li`
     font-weight: 100;
     color: #ffffffb5;
+    transition: .1s;
 
     :hover {
         color:white;
         border-bottom: 0.5px solid #ffffffb3;
-        transition: .3s;
       }
 `;
 
 
-class Menu extends React.Component {
-    render() {
-        const menuElements = ['Discover','Suggestions','Points','Connected','Updates'];
-        return (
-            <MenuList> 
-                {menuElements.map(text => (
-                        <MenuLink>{text}</MenuLink>
-                    )
-                )}
-            </MenuList>
-        );
-    }
+function Menu() {
+    const menuElements = ['Discover','Suggestions','Points','Connected','Updates'];
+    return (
+        <MenuList> 
+            {menuElements.map(text => (
+                <MenuLink>{text}</MenuLink>
+                )
+            )}
+        </MenuList>
+    );
 }
 
 export default Menu;

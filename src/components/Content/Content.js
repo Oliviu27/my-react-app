@@ -1,15 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import ContentBody from './ContentBody';
 
 const ContentContainer = styled.div`
-  height: 50%;
-  background: aliceblue;
+    min-height: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 function Content() {
     return (
     <ContentContainer>
-      <p>Content</p>
+      <ContentBody/>
     </ContentContainer>
     );
 }
