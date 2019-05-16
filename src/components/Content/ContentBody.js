@@ -16,18 +16,18 @@ const ContentBodyBackground = styled.div`
 `;
 
 const ContentHeader = styled.p`
-    width: 60%;
+    width: 80%;
     text-align: center;
     font-weight: inherit;
     font-size: 20px;
+    margin-top: 0px;
 `;
 
 const TestimoniesWrapper = styled.div`
-    max-width: 90%;
+    width: 80%;
     height: auto;
-    min-width: 80%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     list-style: none;
     flex-wrap: wrap;
 `;
@@ -40,9 +40,7 @@ function ContentBody(){
             <ContentHeader>Look at what our clients had to say about our experience</ContentHeader>
             <TestimoniesWrapper>
                 {testimonyList.map(testimony => (
-                    <Testimony
-                        {...testimony}
-                    />
+                    <Testimony{...testimony} />
                 ))}
             </TestimoniesWrapper>
         </ContentBodyBackground>

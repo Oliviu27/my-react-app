@@ -7,19 +7,19 @@ const Banner = styled.div`
     justify-content: space-evenly;
     align-items: center; 
     flex-direction: column;
+    width: 80%;
 `;
 
 const BannerText = styled.span`
     color: white;
-    width: 75%;
     font-size: 12px;
     text-align: center;
     font-weight: 100;
-    margin: 5px;
 `;
 
 const ToggableBannerText = styled(BannerText)`
     display: ${props => props.bannerIsVisible ? 'block' : 'none'};
+    margin-bottom: 12px;
 `;
 
 const BannerButton = styled.button`

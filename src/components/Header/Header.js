@@ -5,9 +5,16 @@ import ContentBanner from './ContentBanner';
 import styled from 'styled-components';
 
 const ParentHeader = styled.div`
-  height: 40%;
-  font-size: 12px;
-  color: white;
+    height: 40%;
+    font-size: 12px;
+    color: white;
+`;
+
+const HeaderContentWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `;
 
 
@@ -15,8 +22,10 @@ function Header() {
     return (
         <ParentHeader>
             <Navigation/>
-            <Logo />
-            <ContentBanner/>
+            <HeaderContentWrapper>
+                <Logo />
+                <ContentBanner/>
+            </HeaderContentWrapper>
         </ParentHeader>
     );
 }

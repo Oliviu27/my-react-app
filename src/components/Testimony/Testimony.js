@@ -14,6 +14,7 @@ const TestimonyContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
+    padding: 20px;
 `;
 
 const Title = styled.h2`

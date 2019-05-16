@@ -42,3 +42,18 @@ export const testimonyList = [
         jobTitle: 'Software Engineer',
     }
 ]
+
+export const footerMenuLists = [ 
+    {
+        menuTitle: 'Product',
+        titleLinks:  ['Business','Features','Promo','Download']
+    },
+    {
+        menuTitle: 'Contact',
+        titleLinks:  ['Employees','Find Us','FAQ','Help']
+    },
+    {
+        menuTitle: 'Follow us',
+        socialMediaLinks:  ['facebook','twitter','linkedIn','google']
+    }
+]
