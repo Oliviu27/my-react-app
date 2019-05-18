@@ -1,17 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+import Menu from '../Menu/Menu';
+import BurgerWrapper from './BurgerWrapper';
 
-class Navigation extends React.Component {
-    render() {
-        const navigationElements = ['PRODUCT','ABOUT','PORTFOLIO','TEAM','CONTACT'];
-        return (
-            <ul className="navigation"> 
-                {navigationElements.map(text => (
-                        <li>{text}</li>
-                    )
-                )}
-            </ul>
+const NavigationContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+`;
+
+
+function Navigation() {
+    return (
+        <NavigationContainer>
+            <BurgerWrapper />
+            <Menu />
+        </NavigationContainer>
         );
     }
-}
 
 export default Navigation;
