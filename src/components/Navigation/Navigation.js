@@ -1,18 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import Menu from '../Menu/Menu';
+import BurgerWrapper from './BurgerWrapper';
 
 const NavigationContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+
 `;
+
 
 function Navigation() {
     return (
         <NavigationContainer>
-            <BurgerMenu />
+            <BurgerWrapper />
             <Menu />
         </NavigationContainer>
         );

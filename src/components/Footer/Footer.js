@@ -42,13 +42,20 @@ const FooterLogo = styled.div`
   justify-content: center;
 `;
 
+const LogoImg = styled.img`
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+`;
+
 function Footer(){
 return (
   <FooterWrapper>
     <FooterContainer>
       <FooterLogo>
-        <p>Discover.</p>
-        <p>MUZIC.</p>
+        <p>Discover</p>
+        <LogoImg src= {require("../../assets/Infinity_loop.png")}/>
+        <p>MUZIC</p>
       </FooterLogo>
       <MenuContainer>
         {footerMenuLists.map(menu => (

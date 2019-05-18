@@ -57,3 +57,7 @@ export const footerMenuLists = [
         socialMediaLinks:  ['facebook','twitter','linkedIn','google']
     }
 ]
+
+export const menuElements = ['Discover','Suggestions','Points','Connected','Updates']
+
+export const burgerMenuLinks = ['Music','Nature','People','Festivals','Prices']

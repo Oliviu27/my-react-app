@@ -19,11 +19,13 @@ const FooterListTitle = styled.p`
     font-weight: 500;
 `;
 
+const Icon = styled.img`
+    width: 20px;
+    margin-right: 5px;
+`;
+
 function FooterMenu(props){
 const {title, links, socialLinks} = props;
-//debugger;
-
-
 
  return (
      <FooterMenuWrapper>
@@ -34,7 +36,7 @@ const {title, links, socialLinks} = props;
             ))}
 
             { socialLinks && !!socialLinks.length && socialLinks.map(link => (
-                <img src={`../../assets/${link}.svg`} alt= {link} />
+                <Icon src={require(`../../assets/${link}.svg`)} alt= {link} />
             ))}
         </FooterList>
      </FooterMenuWrapper>

@@ -19,14 +19,14 @@ const BannerText = styled.span`
 
 const ToggableBannerText = styled(BannerText)`
     display: ${props => props.bannerIsVisible ? 'block' : 'none'};
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 `;
 
 const BannerButton = styled.button`
     color: #ffffffe8;
     border: 1.2px solid #ffffffba;
     font-size: 10px;
-    height: 20px;
+    height: 25px;
     text-align: center;
     width: 85px;
     padding: 0;
@@ -34,11 +34,16 @@ const BannerButton = styled.button`
     border-radius: 5px;
     text-align: center;
     font-family: Arial Narrow;
-    margin: 10px;
+    margin: 15px;
 
-    :hover{
+    :hover {
         color: white;
         border: 1.2px solid white;
+        cursor: pointer;
+    }
+    
+    :focus {
+        outline: none;
     }
 `;
 
@@ -61,9 +66,9 @@ class ContentBanner extends React.Component {
         const { bannerIsVisible } = this.state;
         return (
             <Banner>
-                <BannerText>It is a long established fact that a reader will be distracted by the readable content of a page when looking</BannerText>
+                <BannerText>It is a long established fact that a reader will be distracted by the readable content of a page when looking at pretty design.</BannerText>
                 <BannerButton onClick={this.toggleBanner}>{bannerIsVisible ? 'ENCOVER' : 'DISCOVER'}</BannerButton>
-                <ToggableBannerText bannerIsVisible={bannerIsVisible}>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</ToggableBannerText>
+                <ToggableBannerText bannerIsVisible={bannerIsVisible}>Quisque cursus aliquam mi lacinia gravida. Integer ut posuere turpis, et maximus neque. Sed odio lectus, bibendum vel felis aliquam, maximus tincidunt augue. Proin facilisis viverra elit vitae pulvinar. Pellentesque vitae aliquet tellus. Duis eu pretium nunc, nec mollis erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam a maximus erat.</ToggableBannerText>
             </Banner>
         );
     }

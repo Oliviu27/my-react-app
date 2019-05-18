@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 const LogoContainer = styled.div`
     text-align:center;
-    height:80%;
     width: 80%;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
+    min-height: 200px;
 `;
 
 const LogoText = styled.p`
@@ -16,11 +17,17 @@ const LogoText = styled.p`
     font-family: amaranth;
 `;
 
+const LogoImg = styled.img`
+    height: 50px;
+    margin: 10px;
+`;
+
 function Logo(){
 return(
     <LogoContainer>
-        <LogoText>Discover.</LogoText>
-        <LogoText>MUZIK.</LogoText>
+        <LogoText>Discover</LogoText>
+        <LogoImg src= {require("../../assets/Infinity_loop.png")}/>
+        <LogoText>MUZIK</LogoText>
     </LogoContainer>
 );
 }
