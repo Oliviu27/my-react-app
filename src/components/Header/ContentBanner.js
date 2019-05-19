@@ -12,7 +12,7 @@ const Banner = styled.div`
 
 const BannerText = styled.span`
     color: white;
-    font-size: 12px;
+    font-size: 18px;
     text-align: center;
     font-weight: 100;
 `;
@@ -25,11 +25,9 @@ const ToggableBannerText = styled(BannerText)`
 const BannerButton = styled.button`
     color: #ffffffe8;
     border: 1.2px solid #ffffffba;
-    font-size: 10px;
-    height: 25px;
+    font-size: 16px;
     text-align: center;
-    width: 85px;
-    padding: 0;
+    padding: 10px;
     background: transparent;
     border-radius: 5px;
     text-align: center;

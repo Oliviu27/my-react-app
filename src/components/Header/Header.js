@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 const ParentHeader = styled.div`
     height: 40%;
-    font-size: 12px;
     color: white;
 `;
 

@@ -12,14 +12,14 @@ const LogoContainer = styled.div`
 `;
 
 const LogoText = styled.p`
-    font-size: 35px;
+    font-size: 55px;
     font-weight: 100;
     font-family: amaranth;
 `;
 
 const LogoImg = styled.img`
-    height: 50px;
-    margin: 10px;
+    height: 60px;
+    margin: 15px;
 `;
 
 function Logo(){
