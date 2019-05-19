@@ -19,6 +19,9 @@ const DropDownMenu = styled.div`
 const MenuLinksList = styled.ul`
     list-style: none;
     padding: 0; 
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 `;
 
 const BurgerMenuWrapper = styled.div`

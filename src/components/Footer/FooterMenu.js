@@ -20,7 +20,7 @@ const FooterListTitle = styled.p`
 `;
 
 const Icon = styled.img`
-    width: 20px;
+    width: 27px;
     margin-right: 5px;
 `;
 

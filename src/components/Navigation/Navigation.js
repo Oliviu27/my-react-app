@@ -7,7 +7,7 @@ const NavigationContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: 18px;
 `;
 
 

@@ -9,7 +9,7 @@ justify-content: center;
 width: 80%;
 height: auto;
 color: black;
-font-size: 12px;
+font-size: 18px;
 font-weight: 100;
 padding: 30px 0;
 justify-content: space-evenly;
@@ -36,22 +36,23 @@ const MenuContainer = styled.div`
 const FooterLogo = styled.div`
   font-weight: 900;
   font-family: amaranth;
-  font-size: 15px;
+  font-size: 24px;
   width: 25%;
   display: flex;
+  align-items: center;
   justify-content: center;
 `;
 
 const LogoImg = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   margin: 5px;
 `;
 
 function Footer(){
 return (
   <FooterWrapper>
-    <FooterContainer>
+    <FooterContainer id="footer">
       <FooterLogo>
         <p>Discover</p>
         <LogoImg src= {require("../../assets/Infinity_loop.png")}/>

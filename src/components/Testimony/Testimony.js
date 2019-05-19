@@ -2,13 +2,13 @@ import React from  'react';
 import styled from 'styled-components';
 
 const TestimonyContainer = styled.div`
-    height: 185px;
-    width: 145px;
+    height: 235px;
+    width: 190px;
     background: #f2eecb;
     border-radius: 3px;
     color: black;
     margin: 10px;
-    font-size: 8px;
+    font-size: 10px;
     text-align: left;
     display: flex;
     flex-wrap: wrap;
