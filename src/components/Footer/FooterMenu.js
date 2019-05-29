@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import uniqueId from 'react-html-id';
 
 const FooterMenuWrapper = styled.div`
     display: flex;
@@ -24,24 +25,29 @@ const Icon = styled.img`
     margin-right: 5px;
 `;
 
-function FooterMenu(props){
-const {title, links, socialLinks} = props;
+class FooterMenu extends React.Component {
 
- return (
-     <FooterMenuWrapper>
-        <FooterListTitle>{title}</FooterListTitle>
-        <FooterList>
-            { links && !!links.length && links.map(link => (
-                <li>{link}</li>
-            ))}
-
-            { socialLinks && !!socialLinks.length && socialLinks.map(link => (
-                <Icon src={require(`../../assets/${link}.svg`)} alt= {link} />
-            ))}
-        </FooterList>
-     </FooterMenuWrapper>
-     
- );
+constructor () {
+    super();
+    uniqueId.enableUniqueIds(this);
 }
+
+render () {
+    return (
+        <FooterMenuWrapper>
+           <FooterListTitle>{this.props.title}</FooterListTitle>
+           <FooterList>
+               { this.props.links && !!this.props.links.length && this.props.links.map(link => (
+                   <li key={this.nextUniqueId()}>{link}</li>
+               ))}
+   
+               { this.props.socialLinks && !!this.props.socialLinks.length && this.props.socialLinks.map(link => (
+                   <Icon src={require(`../../assets/${link}.svg`)} alt= {link} key={this.nextUniqueId()}/>
+               ))}
+           </FooterList>
+        </FooterMenuWrapper>
+        
+    );
+} }
 
 export default FooterMenu;

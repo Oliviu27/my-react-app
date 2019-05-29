@@ -4,14 +4,14 @@ export const scrollToElement = id => {
         scrollContainer = scrollContainer.parentNode;
         if (!scrollContainer) return;
         scrollContainer.scrollTop += 1;
-    } while (scrollContainer.scrollTop == 0);
+    } while (scrollContainer.scrollTop === 0);
     
     let targetY = 0;
 
     do { 
-        if (id == scrollContainer) break;
+        if (id === scrollContainer) break;
         targetY += id.offsetTop;
-    } while (id = id.offsetParent);
+    } while (id === id.offsetParent);
     
     window.scroll = function(c, a, b, i) {
         i++; if (i > 30) return;

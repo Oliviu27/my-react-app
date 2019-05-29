@@ -30,10 +30,7 @@ const LinkButton = styled.button`
 `;
 
 class Link extends React.Component {
-    constructor(props)  {
-        super(props);
-    }
-
+    
     onClickScroll(text) {
         const testimoniesWrapper = document.getElementById('testimonyWrapper');
         const footerWrapper = document.getElementById('footer');

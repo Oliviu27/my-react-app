@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import Link from '../Link/Link';
 import { burgerMenuLinks } from '../../data';
+import uniquId from 'react-html-id';
 
 const DropDownMenu = styled.div`
     color: white;
@@ -38,6 +39,7 @@ class BurgerWrapper extends React.Component {
         }
         this.toggleDropDownMenu = this.toggleDropDownMenu.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
+        uniquId.enableUniqueIds(this);
     }
 
     componentWillMount() {
@@ -63,13 +65,14 @@ class BurgerWrapper extends React.Component {
 
     render() {
         const { menuIsVisible } = this.state;
+
         return (
             <BurgerMenuWrapper ref = {node => {this.node = node}}>
                 <BurgerMenu onClick={this.toggleDropDownMenu} menuDisplayed={menuIsVisible} />
                 <DropDownMenu isVisible = { menuIsVisible }>
                     <MenuLinksList>
                         {burgerMenuLinks.map(text =>
-                            <Link text={text} />
+                            <Link text={text} key={this.nextUniqueId()}/>
                         )}
                     </MenuLinksList>
                 </DropDownMenu>
