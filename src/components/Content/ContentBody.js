@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Testimony from '../Testimony/Testimony';
 import { testimonyList } from '../../data';
+import uniqueId from 'react-html-id';
 
 const ContentBodyBackground = styled.div`
     width: 100%;
@@ -34,17 +35,23 @@ const TestimoniesWrapper = styled.div`
 
 
 
-function ContentBody(){
-    return(
-        <ContentBodyBackground  id="testimonyWrapper">
-            <ContentHeader>Look at the testimonies about our experience</ContentHeader>
-            <TestimoniesWrapper>
-                {testimonyList.map(testimony => (
-                    <Testimony{...testimony} />
-                ))}
-            </TestimoniesWrapper>
-        </ContentBodyBackground>
-    ); 
+class ContentBody extends React.Component {
+    constructor () {
+        super();
+        uniqueId.enableUniqueIds(this);
+    }
+    render () {
+        return(
+            <ContentBodyBackground  id="testimonyWrapper">
+                <ContentHeader>Look at the testimonies about our experience</ContentHeader>
+                <TestimoniesWrapper>
+                    {testimonyList.map(testimony => (
+                        <Testimony{...testimony} key={this.nextUniqueId()}/>
+                    ))}
+                </TestimoniesWrapper>
+            </ContentBodyBackground>
+        ); 
+    }
 }
 
 export default ContentBody;

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import FooterMenu from './FooterMenu';
-import {footerMenuLists} from '../../data'
+import {footerMenuLists} from '../../data';
+import uniqueId from 'react-html-id';
 
 const FooterContainer = styled.div`
 display: flex;
@@ -49,23 +50,30 @@ const LogoImg = styled.img`
   margin: 5px;
 `;
 
-function Footer(){
-return (
-  <FooterWrapper>
-    <FooterContainer id="footer">
-      <FooterLogo>
-        <p>Discover</p>
-        <LogoImg src= {require("../../assets/Infinity_loop.png")}/>
-        <p>MUZIC</p>
-      </FooterLogo>
-      <MenuContainer>
-        {footerMenuLists.map(menu => (
-          <FooterMenu title={menu.menuTitle} links={menu.titleLinks} socialLinks={menu.socialMediaLinks}/>
-        ))}
-      </MenuContainer>
-    </FooterContainer>
-  </FooterWrapper>
-);
+class Footer extends React.Component{
+constructor () {
+  super();
+  uniqueId.enableUniqueIds(this);
+}
+
+render () {
+  return (
+    <FooterWrapper>
+      <FooterContainer id="footer">
+        <FooterLogo>
+          <p>Discover</p>
+          <LogoImg src= {require("../../assets/Infinity_loop.png")}/>
+          <p>MUZIC</p>
+        </FooterLogo>
+        <MenuContainer>
+          {footerMenuLists.map(menu => (
+            <FooterMenu title={menu.menuTitle} links={menu.titleLinks} socialLinks={menu.socialMediaLinks} key={this.nextUniqueId()}/>
+          ))}
+        </MenuContainer>
+      </FooterContainer>
+    </FooterWrapper>
+  );
+}
 }
 
 export default Footer;
